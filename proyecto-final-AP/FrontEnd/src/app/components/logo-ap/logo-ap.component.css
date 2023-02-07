@@ -31,3 +31,16 @@ img{
         align-items: center;
     }
 }
+
+#facebook:hover{
+    transform: scale(1.15);
+}
+#github:hover{
+    transform: scale(1.15);
+}
+#instagram:hover{
+    transform: scale(1.15);
+}
+#linkedin:hover{
+    transform: scale(1.15);
+}
