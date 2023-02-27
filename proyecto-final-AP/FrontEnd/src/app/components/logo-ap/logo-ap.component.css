@@ -12,6 +12,10 @@
     width: 150px;
 }
 
+#logoAP:hover{
+    transform: scale(1.15);
+}
+
 img{
     width: 45px;
     padding: 5px;

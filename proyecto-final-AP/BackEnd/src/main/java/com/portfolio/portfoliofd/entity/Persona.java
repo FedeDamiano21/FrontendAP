@@ -1,26 +1,25 @@
 package com.portfolio.portfoliofd.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+
+
+import javax.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
-
-
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
 @Getter @Setter
-@Entity
+
+@Entity 
 public class Persona {
-    
-    
+       
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
-    
+   
     private String nombre;
     private String apellido;
     
