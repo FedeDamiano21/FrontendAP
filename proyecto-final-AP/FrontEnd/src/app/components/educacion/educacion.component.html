@@ -1,15 +1,33 @@
 <div class="row">
     <h1>Educacion</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+            Agregar educacion
+        </button>
+    </div>
+    <div class="col-lg-1"></div>
     <div class="col-lg-11">
-        <ul>
-            <li> 
-                <h1>Universidad Tecnologica Nacional</h1> 
-                <p>Ingenieria en sistemas de información</p>
-            </li>
-            <li>
-                <h1>Ipem °38 Francisco Pablo de Mauro</h1> 
-                <p>Bachiller en Ciencias Naturales</p>
-            </li>
-        </ul>
+        <table class="table">
+            <div>
+                <div *ngFor="let Educacion of educacion">  
+                    <ul>
+                        <li>
+                            <h2>{{Educacion.nombreE}}</h2>
+                            <p>{{Educacion.descripcionE}}</p>
+                        </li>
+                    </ul>   
+                    <div class="botones" *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="bi bi-pencil-fill"></i>
+                        </button>
+                    
+                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash3"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </table>
     </div>
 </div>
+

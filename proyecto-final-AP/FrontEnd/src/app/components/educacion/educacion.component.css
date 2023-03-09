@@ -7,7 +7,23 @@
 }
 
 
-h1, h3{
+ h2, h3{
     font-size: 30px;
     display: inline;
+    color: #000;
+}
+
+p, li{
+    color: #000;
+}
+
+.botones{
+    text-align: end;
+    margin-top: -100px;
+}
+
+button{
+    display: inline-block;
+    margin: 5px;
+    
 }

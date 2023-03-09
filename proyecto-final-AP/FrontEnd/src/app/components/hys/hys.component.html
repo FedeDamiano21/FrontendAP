@@ -1,15 +1,23 @@
 <div class="row">
+
     <h1>Hard & Soft skills</h1>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
+
+    <div class="col-lg-2">
+        <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+    </div>
+
+    <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
         <circle-progress
-            [percent]="95"
+            [percent]="(skill.porcentaje)"
             [radius]="100"
-            [imageSrc]="'../assets/logohtml.png'"
-            [showImage]="true"
+            [imageSrc]="''"
+            [showImage]="false"
             [imageHeight]="70"
             [imageWidth]="70"
             [showUnits]="false"
-            [title]="'HTML'"
+            [title]="(skill.nombre)"
+            [showTitle]="true"
+            [titleColor]="'#212F3C'"
             [outerStrokeWidth]="16"
             [innerStrokeWidth]="8"
             [outerStrokeColor]="'#8F250F'"
@@ -17,95 +25,16 @@
             [animation]="true"
             [animationDuration]="300"
         ></circle-progress>
+
+        <div class="botones" *ngIf="isLogged">
+            <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
+                <i class="bi bi-pencil-fill"></i> 
+            </button>
+        
+            <button class="btn btn-danger" (click)="delete(skill.id)">
+                <i class="bi bi-trash3"></i> 
+            </button>
+        </div>
     </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="80"
-            [radius]="100"
-            [imageSrc]="'../assets/logocss.png'"
-            [showImage]="true"
-            [imageHeight]="70"
-            [imageWidth]="70"
-            [showUnits]="false"
-            [title]="'CSS'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#8F250F'"
-            [innerStrokeColor]="'#E8E8E8'"
-            [animation]="true"
-            [animationDuration]="300"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="80"
-            [radius]="100"
-            [imageSrc]="'../assets/logojs.png'"
-            [showImage]="true"
-            [imageHeight]="90"
-            [imageWidth]="90"
-            [showUnits]="false"
-            [title]="'JS'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#8F250F'"
-            [innerStrokeColor]="'#E8E8E8'"
-            [animation]="true"
-            [animationDuration]="300"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="75"
-            [radius]="100"
-            [imageSrc]="'../assets/logopython.png'"
-            [showImage]="true"
-            [imageHeight]="70"
-            [imageWidth]="70"
-            [showUnits]="false"
-            [title]="'PYTHON'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#8F250F'"
-            [innerStrokeColor]="'#E8E8E8'"
-            [animation]="true"
-            [animationDuration]="300"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="100"
-            [radius]="100"
-            [imageSrc]="'../assets/trabajoenequipo.png'"
-            [showImage]="true"
-            [imageHeight]="70"
-            [imageWidth]="70"
-            [showUnits]="false"
-            [title]="'T.EQUIPO'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#8F250F'"
-            [innerStrokeColor]="'#E8E8E8'"
-            [animation]="true"
-            [animationDuration]="300"
-        ></circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="100"
-            [radius]="100"
-            [imageSrc]="'../assets/git.png'"
-            [showImage]="true"
-            [imageHeight]="70"
-            [imageWidth]="70"
-            [showUnits]="false"
-            [title]="'GITHUB'"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#8F250F'"
-            [innerStrokeColor]="'#E8E8E8'"
-            [animation]="true"
-            [animationDuration]="300"
-        ></circle-progress>
-    </div>
+    
 </div>
