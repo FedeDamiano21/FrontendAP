@@ -1,0 +1,3 @@
+com\portfolio\portfoliofd\PortfoliofdApplication.class
+com\portfolio\portfoliofd\entity\Persona.class
+com\portfolio\portfoliofd\repository\PersonaRepository.class
