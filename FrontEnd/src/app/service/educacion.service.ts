@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'https://backendap-production-5be4.up.railway.app/educacion/'
+  URL = 'https://frontendap-ae6eb.web.app//educacion/'
 
   constructor(private httpClient: HttpClient) { }
 

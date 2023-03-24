@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SkillService {
-  URL = 'https://backendap-production-5be4.up.railway.app/skill/'
+  URL = 'https://frontendap-ae6eb.web.app//skill/'
   
   constructor(private httpClient: HttpClient) { }
 
