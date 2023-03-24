@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'http://localhost:8080/educacion/'
+  URL = 'https://backendap-production-5be4.up.railway.app/educacion/'
 
   constructor(private httpClient: HttpClient) { }
 
